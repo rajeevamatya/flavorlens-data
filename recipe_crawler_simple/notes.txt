@@ -1,0 +1,7 @@
+1. ingredient: Base ingredient name only, including essential variety/type identifiers but removing all descriptors, formats, modifiers, sizes, parts, temperatures, brands, 
+                preparation states, cutting methods, and dietary preferences (e.g., "matcha green tea powder" → "matcha", "extra-virgin olive oil" → "olive oil", 
+                "boiling water" → "water", "baby spinach" → "spinach", "bone-in pork chops" → "pork chops", "Barista soy milk" → "soy milk", "ground cumin" → "cumin", 
+                "fresh ginger" → "ginger", "sweetened condensed coconut milk" → "coconut milk", "chopped onions" → "onions", "dried shiitake mushrooms" → "shiitake mushrooms", 
+                "gluten-free bread" → "bread", "vegan cheddar cheese" → "cheddar cheese", "freeze dried raspberries" → "raspberries", "plant based milk" → "milk"). 
+                Remove dietary preferences like vegan, gluten-free, keto, organic, non-GMO, etc. Extract only the core food item while preserving essential variety distinctions 
+                like "cheddar cheese" vs "swiss cheese" or "shiitake mushrooms" vs "button mushrooms".
