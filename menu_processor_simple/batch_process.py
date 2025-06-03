@@ -15,32 +15,6 @@ def batch_update_menu_items():
     
     logger.info("Starting batch update of menu_items...")
     
-    # First, create optimized indexes for performance
-    logger.info("Creating indexes for optimization...")
-    try:
-        conn = get_db_connection()
-        with conn.cursor() as cursor:
-            # Index on menu_images for faster lookups
-            cursor.execute("""
-                CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_menu_images_old_id_lookup 
-                ON menu.menu_images(old_image_id, image_id, date_uploaded) 
-                WHERE old_image_id IS NOT NULL
-            """)
-            
-            # Index on menu_items for faster joins
-            cursor.execute("""
-                CREATE INDEX CONCURRENTLY IF NOT EXISTS idx_menu_items_old_id 
-                ON menu.menu_items(old_image_id) 
-                WHERE old_image_id IS NOT NULL
-            """)
-            
-            conn.commit()
-            logger.info("Indexes created successfully.")
-        conn.close()
-    except Exception as e:
-        logger.error(f"Error creating indexes: {e}")
-        return
-    
     # Get total count for progress tracking
     try:
         conn = get_db_connection()
