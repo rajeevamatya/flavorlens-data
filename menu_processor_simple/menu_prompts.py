@@ -102,7 +102,7 @@ IMPORTANT INSTRUCTIONS:
 
 DISH INFORMATION:
 1. dish_name: The official or common name of the dish
-2. description: Brief description of the dish (max 200 characters)
+2. description: Brief description of the dish (max 200 characters). Only use the provided information. Do not make up anything.
 3. meal_time: Time of day when the dish is typically consumed (breakfast, lunch, dinner, snack, dessert)
 4. general_category: Broad classification of the dish (beverage, dessert, sauce/condiment, main dish, snack, bakery, appetizer/side, confectionery)
 5. specific_category: More specific categorization within the general category (eg. tiramisu, cake, cocktail, pizza, burger, etc.)
@@ -132,8 +132,8 @@ INGREDIENTS (for each ingredient):
 5. type: Category or type of ingredient (e.g., protein, vegetable, spice, condiment, etc.)
 6. ingredient_role: Role of the ingredient in the dish (base, functional, flavor/aromatic, texture)
 7. flavor_role: Flavor contribution of the ingredient (dominant, supportive, accent, background, contrasting)
-8. alternative_ingredients: List of possible substitutes using the same naming format (e.g., ["avocado oil", "canola oil"], ["coconut milk", "cream"], 
-                            ["rose harissa", "green harissa"])
+8. alternative_ingredients: List of substitutes explicitly mentioned using the same naming format (e.g., ["avocado oil", "canola oil"], ["coconut milk", "cream"], 
+                            ["rose harissa", "green harissa"]). Must be explicitly mentioned. Do not infer. 
 
 
 ATTRIBUTES (extract if explicitly mentioned OR clearly inferred from the recipe text):
