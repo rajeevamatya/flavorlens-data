@@ -2,6 +2,7 @@
 """
 Script to copy data from PostgreSQL to MotherDuck
 Processes data in batches of 1000 rows
+APPENDS data (does not clear existing tables)
 """
 
 import duckdb
@@ -47,10 +48,7 @@ class DataCopier:
     
     def copy_dishes(self):
         """Copy dishes table from PostgreSQL to MotherDuck"""
-        logger.info("Starting dishes table copy...")
-        
-        # Clear MotherDuck table
-        self.duck_conn.execute("DELETE FROM dishes")
+        logger.info("Starting dishes table copy (append mode)...")
         
         pg_cursor = self.pg_conn.cursor()
         
@@ -125,10 +123,7 @@ class DataCopier:
     
     def copy_dish_ingredients(self):
         """Copy dish_ingredients table from PostgreSQL to MotherDuck"""
-        logger.info("Starting dish_ingredients table copy...")
-        
-        # Clear MotherDuck table
-        self.duck_conn.execute("DELETE FROM dish_ingredients")
+        logger.info("Starting dish_ingredients table copy (append mode)...")
         
         pg_cursor = self.pg_conn.cursor()
         
@@ -193,10 +188,7 @@ class DataCopier:
     
     def copy_dish_attributes(self):
         """Copy dish_attributes table from PostgreSQL to MotherDuck"""
-        logger.info("Starting dish_attributes table copy...")
-        
-        # Clear MotherDuck table 
-        self.duck_conn.execute("DELETE FROM dish_attributes")
+        logger.info("Starting dish_attributes table copy (append mode)...")
         
         pg_cursor = self.pg_conn.cursor()
         
@@ -288,7 +280,7 @@ class DataCopier:
 
 
 if __name__ == "__main__":
-    logger.info("Starting PostgreSQL to MotherDuck data copy...")
+    logger.info("Starting PostgreSQL to MotherDuck data copy (append mode)...")
     logger.info("Using configuration from config.py")
     
     copier = DataCopier()
