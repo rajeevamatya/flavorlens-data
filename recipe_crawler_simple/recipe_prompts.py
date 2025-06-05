@@ -147,8 +147,8 @@ INGREDIENTS (for each ingredient):
 7. type: Category or type of ingredient (e.g., protein, vegetable, spice, condiment, etc.)
 8. ingredient_role: Role of the ingredient in the dish (base, functional, flavor/aromatic, texture)
 9. flavor_role: Flavor contribution of the ingredient (dominant, supportive, accent, background, contrasting)
-10. alternative_ingredients: List of possible substitutes using the same naming format (e.g., ["avocado oil", "canola oil"], ["coconut milk", "cream"], 
-                            ["rose harissa", "green harissa"])
+10. alternative_ingredients: List of substitutes explicitly mentioned using the same naming format (e.g., ["avocado oil", "canola oil"], ["coconut milk", "cream"], 
+                            ["rose harissa", "green harissa"]). Must be explicitly mentioned. Do not infer. 
 
 
 ATTRIBUTES (extract if explicitly mentioned OR clearly inferred from the recipe text):

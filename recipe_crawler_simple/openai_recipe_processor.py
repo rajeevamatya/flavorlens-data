@@ -5,7 +5,7 @@ from openai import AsyncAzureOpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from config import AZURE_API_ENDPOINT, AZURE_API_KEY, AZURE_API_VERSION, setup_logging, get_db_connection
-from prompts import SYSTEM_PROMPT_RECIPE_EXTRACTION, DishModel
+from recipe_prompts import SYSTEM_PROMPT_RECIPE_EXTRACTION, DishModel
 
 setup_logging()
 logger = logging.getLogger(__name__)
